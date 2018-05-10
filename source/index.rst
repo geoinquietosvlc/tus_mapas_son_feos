@@ -1,20 +1,18 @@
-.. Vuestros mapas son feos y no sabéis por qué documentation master file, created by
-   sphinx-quickstart on Thu May 10 23:19:40 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to Vuestros mapas son feos y no sabéis por qué's documentation!
+Vuestros mapas son feos y no sabéis por qué
 =======================================================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Tabla de Contenidos:
+
+   010/010010_tecnica.rst
+   020/020010_emocion.rst
+   900/900010_referencias.rst
 
 
 
-Indices and tables
+Índices
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
