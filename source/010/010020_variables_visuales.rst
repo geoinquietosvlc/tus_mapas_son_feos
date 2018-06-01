@@ -41,7 +41,7 @@ Las variables (cont)
 Características
 """""""""""""""
 
-Estas variables nos permiten a su vez representar una serie de característias:
+Estas variables nos permiten a su vez representar una serie de características:
 
 Selectiva
    el cambio nos permite destacar elementos sobre un grupo
@@ -49,7 +49,7 @@ Selectiva
 Asociativa
    el cambio nos permite percibir elementos como parte de un grupo
 
-Órden
+Orden
    el cambio permite apreciar un cambio en el ordenamiento de los elementos
 
 Cuantitativa
@@ -143,7 +143,7 @@ significativas.
 
    La correcta proporción de los símbolos ayuda a la interpretación.
 
-La mejor proporción que se puede usar suele ser el número aureo.
+La mejor proporción que se puede usar suele ser el número áureo.
 
 .. figure:: ../img/010020_017.jpg
    :alt: Imagen con proporciones en el radio y el superficie
@@ -163,7 +163,7 @@ El pollo del arroz con pollo de los mapas.
 
    El color es como el Pollo
 
-Es epecialmente poderoso y generalmente suele estar mal usado.
+Es especialmente poderoso y generalmente suele estar mal usado.
 
 Tradicionalmente el color tiene tres componentes
 
@@ -188,7 +188,7 @@ Algunos errores con el color
 
 El primer error que se suele cometer es usar **demasiado**::
 
-    No más de 6 ó 7 colores diferentes en un mapa
+    No más de 6 o 7 colores diferentes en un mapa
 
 
 .. figure:: ../img/010020_014.jpg
@@ -262,7 +262,7 @@ Cantidad de información que compone un elemento.
 Conclusión
 """"""""""
 
-Todo buen cartografo debería tener una copia de este imagen siempre a mano:
+Todo buen cartógrafo debería tener una copia de este imagen siempre a mano:
 
 .. figure:: ../img/010020_000.jpg
    :alt: Imagen resumen de las variables visuales y su uso
