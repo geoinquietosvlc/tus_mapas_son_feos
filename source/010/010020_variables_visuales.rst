@@ -64,9 +64,16 @@ sobre tres tipos de elementos:
 * Puntos
 * Líneas
 * Áreas
-  
-Aunque con cosas como `Kepler.gl <https://uber.github.io/kepler.gl/>`_ hay que
-empezar a pensar también en volúmenes.
+
+Aunque con herramientas como  `Carto <https://abel.carto.com/builder/28d1dd06-2d85-11e6-ae20-0ecd1babdde5/embed?state=%7B%22map%22%3A%7B%22ne%22%3A%5B38.535536074264044%2C-0.12233018875122072%5D%2C%22sw%22%3A%5B38.54224123392013%2C-0.11242747306823732%5D%2C%22center%22%3A%5B38.53888873222173%2C-0.11737883090972902%5D%2C%22zoom%22%3A17%7D%2C%22widgets%22%3A%7B%222b60c32f-7959-4278-b1ac-de3614381d67%22%3A%7B%22normalized%22%3Atrue%7D%2C%221e701f3d-ac23-4188-b51e-c02c3ff2abd1%22%3A%7B%22normalized%22%3Atrue%7D%7D%7D>`_
+o `Kepler.gl <https://uber.github.io/kepler.gl/>`_ hay que empezar a pensar
+también en volúmenes.
+
+.. figure:: ../img/010020_018.jpg
+   :alt: Mapa de datos de la producción forestal en Europa
+
+   La correcta proporción de los símbolos ayuda a la interpretación.
+
 
 Posición
 """"""""
@@ -145,7 +152,6 @@ La mejor proporción que se puede usar suele ser el número aureo.
    superficie.
 
 
-
 Color
 """""
 
@@ -197,8 +203,8 @@ características.
 .. figure:: ../img/010020_015.jpg
    :alt: Mapa de coropletas con datos del paro
 
-   Parece que en Castilla hay un gran problema... pero lo que sobretodo hay son
-   grandes superficies en los municipios.
+   Parece que en Castilla se produce mucho un fenómeno... pero lo que sobretodo
+   hay son grandes superficies en los municipios.
 
 
 El tercero: Se debería siempre tener en cuenta que se va a hacer con el mapa y
