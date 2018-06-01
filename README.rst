@@ -54,3 +54,5 @@ Introductorio
 Archivos
 ========
 
+* http://tus-mapas-son-feos.rtfd.io/
+* https://github.com/geoinquietosvlc/tus_mapas_son_feos
