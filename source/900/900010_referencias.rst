@@ -7,6 +7,7 @@ Diseño
 * http://pdi.topografia.upm.es/mab/apuntesalumnos/
 * https://www.axismaps.com/guide/
 * https://www.slideshare.net/DUSPviz/easy-steps-to-better-maps
+* https://www.slideshare.net/shaktinanda/principles-of-design-56175885
 
 Simbología
 ~~~~~~~~~~~
