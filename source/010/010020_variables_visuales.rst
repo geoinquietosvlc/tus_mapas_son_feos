@@ -24,9 +24,6 @@ En el lenguaje gráfico actual se reconocen las siguientes variables
   + Valor
   + Transparencia
 
-Las variables (cont)
-""""""""""""""""""""""""""
-
 * Estructura del relleno
 
   + Textura
