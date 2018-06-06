@@ -39,6 +39,7 @@ deberías mirártelo):
   + Proyecciones (La tierra no es plana pero tu mapa sí)
 
 * La percepción
+* Etiquetado y tipografía
 * Simbología
 * Geografía
 * Herramientas cartográficas

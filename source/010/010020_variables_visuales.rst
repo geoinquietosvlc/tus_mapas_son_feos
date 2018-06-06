@@ -56,8 +56,9 @@ Elementos del diseño cartográfico
 """""""""""""""""""""""""""""""""
 
 Por otro lado siempre entenderemos que vamos a usar las variables visuales
-sobre tres tipos de elementos:
+sobre cuatro tipos de elementos:
 
+* Etiquetas
 * Puntos
 * Líneas
 * Áreas
@@ -71,6 +72,14 @@ también en volúmenes.
 
    La correcta proporción de los símbolos ayuda a la interpretación.
 
+Aunque en el presente taller no hablemos de nada de Etiquetado si que habría
+que tener en cuenta una ley que deberíamos intentar cumplir, el orden de los
+elementos en un mapa.
+
+* Marcadores
+* Etiquetas
+* Información temática
+* Mapa base
 
 Posición
 """"""""
