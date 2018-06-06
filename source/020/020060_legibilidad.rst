@@ -8,7 +8,7 @@ ir en proporción con la escala.
 
 Deben evitarse textos o símbolos que se solapen.
 
-.. figure:: ../img/020050_001.jpg
+.. figure:: ../img/020060_001.jpg
    :alt: Imagen de un mapa vectorial
 
    Mapa de las afueras de Southampton
