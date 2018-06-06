@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Vuestros mapas son feos y no sabéis por qué</title>
+
+        <link rel="stylesheet" href="css/custom.css">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/league.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <section>
+                        <h1>Vuestros mapas son feos y no sabéis por qué</h1>
+                        <p>
+                            <small>Pedro-Juan Ferrer Matoses</small>
+                        </p>
+                        <p>
+                            <small>Geographica</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Introducción</h2>
+                        <p><em>Caveat Emptor</em>:</p>
+                        <div class="highlight-default notranslate">
+                            <pre>
+<span class="fragment">
+<span class="n">Este es un taller **especulativo**, no científico</span>
+</span>
+<span class="fragment">
+<span class="n">No hay una receta para hacer las cosas bien,
+no hay una bala de plata</span>
+</span>
+<span class="fragment">
+<span class="n">Aunque hay reglas, estas no se aplican siempre ni siempre igual</span>
+</span>
+                            </pre>
+                        </div>
+                    </section>
+                    <section>
+                        <p>Antes de empezar, habría que tener claros unos conceptos</p>
+                        <ul class="simple">
+                        <li>Diseño vs. Arte vs. Estética</li>
+                        <li class="fragment">Útil / no útil <strong class="fragment">¿Comuníca?</strong></li>
+                        <li class="fragment">Feo / Bonito <strong class="fragment">¿Es estético?</strong></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Contenidos<a class="headerlink" href="#contenidos" title="Enlazar permanentemente con este título">¶</a></h2>
+                        <p>Antes de ver de qué vamos a hablar… de qué <strong>NO</strong> vamos a hablar:</p>
+                        <p><strong>Tabla de NO Contenidos:</strong></p>
+                        <ul class="simple">
+                        <li>Teoría de la comunicación.</li>
+                        <li>Reproducción cartográfica.</li>
+                        <li>Cartografía matemática:<ul>
+                        <li>Escalas</li>
+                        <li>Coordenadas</li>
+                        <li>Proyecciones</li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <p><strong>Tabla de NO Contenidos (cont)</strong></p>
+                        <ul class="simple">
+                        <li>La percepción</li>
+                        <li>Etiquetado y tipografía</li>
+                        <li>Simbología</li>
+                        <li>Geografía</li>
+                        <li>Herramientas cartográficas<ul>
+                        <li>Software</li>
+                        <li>Hardware</li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <p>De lo que <strong>SÍ</strong> vamos a hablar es:</p>
+                        <ul class="simple">
+                        <li>Parte Técnica<ul>
+                        <li>Variables visuales</li>
+                        <li>Composicion</li>
+                        </ul>
+                        </li>
+                        <li>Parte Emocional<ul>
+                        <li>Principios del diseño</li>
+                        </ul>
+                        <li>Referencias</li>
+                        </li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Conceptos técnicos</h3>
+                        <p>Como en todo <em>Arte</em> en el Diseño Cartográfico hay una técnica que subyace</p>
+                        <p class="fragment">Dominar la técnica <strong>NO</strong> garantiza producir cosas con buena estética</p>
+                        <p class="fragment">Desconocer la técnica conduce inevitablemente al desastre</p>
+                        <p class="fragment">(a alguno, en algún momento)</p>
+                    </section>
+                    <section>
+                        <h4>Variables visuales</h4>
+                        <div class="section" id="definicion">
+                            <span class="n">Cualquier aspecto que puede hacer diferir una marca o señal de otra</span>
+                        </div>
+                    </section>
+                    <section>
+                        <h5>Las variables</h5>
+                        <ul class="simple">
+                        <li>Posición</li>
+                        <li>Forma</li>
+                        <li>Orientación</li>
+                        <li>Tamaño</li>
+                        <li>Color<ul>
+                        <li>Tono</li>
+                        <li>Saturación</li>
+                        <li>Valor</li>
+                        <li>Transparencia</li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h5>Las variables (cont)</h5>
+                        <ul>
+                        <li>Estructura del relleno<ul>
+                        <li>Textura</li>
+                        <li>Densidad</li>
+                        <li>Módulo</li>
+                        <li>Estructura</li>
+                        </ul>
+                        </li>
+                        <li>Foco</li>
+                        <li>Resolución</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h5>Características</h5>
+                        <p>Con las variables expresamos características:</p>
+                        <dl class="docutils">
+                            <dt><strong>Selectiva</strong></dt>
+                        <dd>el cambio nos permite destacar elementos sobre un grupo</dd>
+                        <div class="fragment">
+                        <dt><strong>Asociativa</strong></dt>
+                        <dd>el cambio nos permite percibir elementos como parte de un grupo</dd>
+                        </div>
+                        </dl>
+                    </section>
+                    <section>
+                        <dl class="docutils">
+                        <dt><strong>Orden</strong></dt>
+                        <dd>el cambio permite apreciar un cambio en el ordenamiento de los elementos</dd>
+                        <div class="fragment">
+                        <dt><strong>Cuantitativa</strong></dt>
+                        <dd>el cambio permite realizar apreciaciones numéricas</dd>
+                        </div>
+                        </dl>
+                    </section>
+                    <section>
+                        <h5>Elementos del diseño cartográfico</h5>
+                        <p>Vamos a usar las variables visuales sobre cuatro tipos de elementos:</p>
+                        <ul class="simple">
+                        <li>Etiquetas</li>
+                        <li>Puntos</li>
+                        <li>Líneas</li>
+                        <li>Áreas</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <p>Aunque con herramientas como  <a class="reference external" href="https://abel.carto.com/builder/28d1dd06-2d85-11e6-ae20-0ecd1babdde5/embed?state=%7B%22map%22%3A%7B%22ne%22%3A%5B38.535536074264044%2C-0.12233018875122072%5D%2C%22sw%22%3A%5B38.54224123392013%2C-0.11242747306823732%5D%2C%22center%22%3A%5B38.53888873222173%2C-0.11737883090972902%5D%2C%22zoom%22%3A17%7D%2C%22widgets%22%3A%7B%222b60c32f-7959-4278-b1ac-de3614381d67%22%3A%7B%22normalized%22%3Atrue%7D%2C%221e701f3d-ac23-4188-b51e-c02c3ff2abd1%22%3A%7B%22normalized%22%3Atrue%7D%7D%7D">Carto</a>
+                        o <a class="reference external" href="https://uber.github.io/kepler.gl/">Kepler.gl</a> hay que empezar a pensar
+                        también en volúmenes.</p>
+                        <div class="figure" id="id1">
+                        <img alt="Mapa de edificios en Manhattan" src="_images/010020_018.jpg">
+                        <p class="caption"><small>Simbolización de edificios</small></p>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <p>Hay una ley no escrita sobre el orden de los elementos en un mapa:</p>
+                        <ul class="simple">
+                        <li>Marcadores</li>
+                        <li>Etiquetas</li>
+                        <li>Información temática</li>
+                        <li>Mapa base</li>
+                        </ul>
+                    </section>
+                </section>
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>

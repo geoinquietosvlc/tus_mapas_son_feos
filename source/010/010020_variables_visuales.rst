@@ -68,9 +68,9 @@ o `Kepler.gl <https://uber.github.io/kepler.gl/>`_ hay que empezar a pensar
 también en volúmenes.
 
 .. figure:: ../img/010020_018.jpg
-   :alt: Mapa de datos de la producción forestal en Europa
+   :alt: Mapa de edificios en Manhattan
 
-   La correcta proporción de los símbolos ayuda a la interpretación.
+   Simbolización de edificios en 3D
 
 Aunque en el presente taller no hablemos de nada de Etiquetado si que habría
 que tener en cuenta una ley que deberíamos intentar cumplir, el orden de los
