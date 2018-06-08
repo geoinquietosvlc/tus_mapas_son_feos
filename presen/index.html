@@ -1,0 +1,953 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Vuestros mapas son feos y no sabéis por qué</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/league.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <link rel="stylesheet" href="css/custom.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body id="reveal-override">
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <section>
+                        <h1>Vuestros mapas son feos y no sabéis <p class="cred">por qué</p></h1>
+                        <p> <small>Pedro-Juan Ferrer Matoses</small> </p>
+                        <p> <small><a href="http://twitter.com/vehrka">@vehrka</a></small> </p>
+                    </section>
+                    <section>
+                        <div class="figure" id="id1">
+                        <img src="_images/000000_000.jpg">
+                        </div>
+                        <blockquote>
+                            Practico la cartografía, los wargames, las cervecerías, el project management
+                            <span class="fragment">... entre otras cosas y no necesariamente por ese orden</span>
+                        </blockquote>
+                    </section>
+                    <section>
+                        <table>
+                            <tr>
+                                <td align="center" width="50%">
+                                    <img src="/_images/000000_001.jpg"/>
+                                </td>
+                                <td align="center" width="50%">
+                                    <img src="/_images/000000_002.jpg"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" width="50%">
+                                    <a href="http://geographica.gs">Geographica</a>
+                                </td>
+                                <td align="center" width="50%">
+                                    <a href="http://geoinquietos.org/grupos/valencia/">Geoinquietos Valencia</a>
+                                </td>
+                            </tr>
+                        </table>
+                        <p><a class="fragment big" href="http://bit.ly/geopaella2018">http://bit.ly/geopaella2018</a></p>
+                    </section>
+                    <section>
+                        <h2>Introducción</h2>
+                        <p><em>Caveat Emptor</em>:</p>
+                        <div class="highlight-default notranslate">
+                            <blockquote>
+                                <p class="fragment">
+                                <span class="n">Este es un taller <em>especulativo</em>, no científico</span>
+                                </p>
+                                <p class="fragment">
+                                <span class="n">No hay una receta para hacer las cosas bien, no hay una bala de plata</span>
+                                </p>
+                                <p class="fragment">
+                                <span class="n">Aunque hay reglas, estas no se aplican siempre ni siempre igual</span>
+                                </p>
+                            </blockquote>
+                        </div>
+                    </section>
+                    <section>
+                        <p>Antes de empezar, habría que tener claros unos conceptos</p>
+                        <ul class="simple">
+                        <li>Diseño vs. Arte vs. Estética</li>
+                        <li class="fragment">Útil / no útil <strong class="fragment cgreen">¿Comuníca?</strong></li>
+                        <li class="fragment">Feo / Bonito <strong class="fragment cgreen">¿Es estético?</strong></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Contenidos</h2>
+                        <p>Antes de ver de qué vamos a hablar… de qué <strong class="cred">NO</strong> vamos a hablar:</p>
+                        <p><strong>Tabla de NO Contenidos:</strong></p>
+                        <ul class="simple">
+                        <li>Teoría de la comunicación.</li>
+                        <li>Reproducción cartográfica.</li>
+                        <li>Cartografía matemática:<ul>
+                        <li>Escalas</li>
+                        <li>Coordenadas</li>
+                        <li>Proyecciones</li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <p><strong>Tabla de NO Contenidos (cont)</strong></p>
+                        <ul class="simple">
+                        <li>La percepción</li>
+                        <li>Etiquetado y tipografía</li>
+                        <li>Simbología</li>
+                        <li>Geografía</li>
+                        <li>Herramientas cartográficas<ul>
+                        <li>Software</li>
+                        <li>Hardware</li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <p>De lo que <strong class="cgreen">SÍ</strong> vamos a hablar es:</p>
+                        <ul class="simple">
+                        <li>Parte Técnica<ul>
+                        <li>Variables visuales</li>
+                        <li>Composición</li>
+                        </ul>
+                        </li>
+                        <li>Parte Emocional<ul>
+                        <li>Principios del diseño</li>
+                        </ul>
+                        <li>Referencias</li>
+                        </li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section data-background="/_images/nacis_design000.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                        <h2>Conceptos técnicos</h2>
+                        <p>Como en todo <em>Arte</em> en el Diseño Cartográfico hay una técnica que subyace</p>
+                        <p class="fragment">Dominar la técnica <strong class="cred">NO</strong> garantiza producir cosas con buena estética</p>
+                        <p class="fragment">Desconocer la técnica conduce inevitablemente al desastre</p>
+                        <small class="fragment">(a alguno, en algún momento)</small>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Variables visuales</h3>
+                        <blockquote>
+                            <span class="n">Cualquier aspecto que puede hacer diferir una marca o señal de otra</span>
+                        </blockquote>
+                    </section>
+                    <section data-background="/_images/nacis_design004.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                        <h4>Características</h4>
+                        <p>Con las variables expresamos características:</p>
+                        <dl class="docutils">
+                            <dt><strong class="cgreen">Selectiva</strong></dt>
+                        <dd>el cambio nos permite destacar elementos sobre un grupo</dd>
+                        <div class="fragment">
+                        <dt><strong class="cgreen">Asociativa</strong></dt>
+                        <dd>el cambio nos permite percibir elementos como parte de un grupo</dd>
+                        </div>
+                        </dl>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design005.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                        <h4>Características</h4>
+                        <dl class="docutils">
+                        <dt><strong class="cgreen">Orden</strong></dt>
+                        <dd>el cambio permite apreciar un cambio en el ordenamiento de los elementos</dd>
+                        <div class="fragment">
+                        <dt><strong class="cgreen">Cuantitativa</strong></dt>
+                        <dd>el cambio permite realizar apreciaciones numéricas</dd>
+                        </div>
+                        </dl>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design006.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                        <h4>Elementos del diseño cartográfico</h4>
+                        <p>Vamos a usar las variables visuales sobre cuatro tipos de elementos:</p>
+                        <ul class="simple">
+                        <li>Etiquetas</li>
+                        <li>Puntos</li>
+                        <li>Líneas</li>
+                        <li>Áreas</li>
+                        </ul>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design007.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                        <p>Aunque con herramientas como  <a class="reference external" href="https://manhattan-3d.geographica.io/">Carto</a>
+                        o <a class="reference external" href="https://uber.github.io/kepler.gl/">Kepler.gl</a> hay que empezar a pensar
+                        también en volúmenes.</p>
+                        <div class="figure" id="id1">
+                        <img alt="Mapa de edificios en Manhattan" src="_images/010020_018.jpg">
+                        <p class="caption"><small>Simbolización de edificios</small></p>
+                        </div>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Las variables</h3>
+                        <ul class="simple">
+                        <li>Posición</li>
+                        <li>Forma</li>
+                        <li>Orientación</li>
+                        <li>Tamaño</li>
+                        <li>Color<ul>
+                        <li>Tono</li>
+                        <li>Saturación</li>
+                        <li>Valor</li>
+                        <li>Transparencia</li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Las variables (cont)</h3>
+                        <ul>
+                        <li>Estructura del relleno<ul>
+                        <li>Textura</li>
+                        <li>Densidad</li>
+                        <li>Módulo</li>
+                        <li>Estructura</li>
+                        </ul>
+                        </li>
+                        <li>Foco</li>
+                        <li>Resolución</li>
+                        </ul>
+                    </section>
+                    <section data-background="/_images/nacis_design009.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Posición</h4>
+                            <p>La prima-ballerina en el ballet los Mapas.</p>
+                            <p>En general es más bien poco <em>«variable»</em></p>
+                            <div class="figure fragment" id="id2">
+                            <img alt="Captura de pantalla de un mapa con Londres mal posicionado" src="_images/010020_001.jpg">
+                            <p class="caption"><small>La «Posición» es la variable reina de los mapas</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design010.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Forma</h4>
+                            <p>La base de la simbología.</p>
+                            <div class="figure" id="id3">
+                            <img alt="Captura de pantalla de un grupo de iconos" src="_images/010020_002.jpg">
+                            </div>
+                            <small class="fragment">Tiene menos sentido aplicado a Líneas y a Áreas que a Puntos</small>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design011.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>Aunque …</p>
+                            <div class="figure" id="id4">
+                            <img alt="Captura de pantalla de un Cartograma" src="_images/010020_003.jpg">
+                            <p class="caption"><small>Distribución de la población en España</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design012.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Orientación</h4>
+                            <p>Algunos autores la consideran parte de la forma.</p>
+                            <p>No tiene mucho sentido en Líneas.</p>
+                            <p>Pero <strong>ojo</strong> con los posibles errores de interpretación.</p>
+                            <div class="figure fragment" id="id5">
+                            <img alt="Captura de pantalla de un error de Orientación" src="_images/010020_004.jpg">
+                            <p class="caption"><small>¿Pinos o flechas?</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design013.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Tamaño (o grosor)</h4>
+                            <p>Esta es una variable que solo se aplica a Puntos y Líneas.</p>
+                            <p>Su uso principal es para representar <strong>Orden</strong>.</p>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design014.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>Un error muy común es intentar representar <strong>Cantidad</strong> con áreas y volúmenes</p>
+                            <div class="figure" id="id6">
+                            <img alt="Figura con la propoción entre superficie y área" src="_images/010020_009.jpg">
+                            <p class="caption"><small>Es muy dificil comparar a ojo tamaños de superficies y de áreas</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design015.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p><em>Cuidado</em> Las variaciones de tamaño hay que representarlas bien para que sean
+                            significativas.</p>
+                            <div class="figure" id="id7">
+                            <img alt="Mapa de datos de la producción forestal en Europa" src="_images/010020_008.jpg">
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design016.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>La mejor proporción que se puede usar suele ser el número áureo.</p>
+                            <div class="figure" id="id8">
+                            <img alt="Imagen con proporciones en el radio y el superficie" src="_images/010020_017.jpg">
+                            <p class="caption"><small>Los círculos rojos tienen una progresión en el radio y los azules en la superficie.</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design017.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Color</h4>
+                            <p>El pollo del arroz con pollo de los mapas.</p>
+                            <div class="figure" id="id9">
+                            <img alt="Fotografía de un plato de arroz con pollo" src="_images/010020_005.jpg">
+                            </div>
+                            <small class="fragment">Es especialmente poderoso y generalmente suele estar mal usado.</small>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design018.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>Tradicionalmente el color tiene tres componentes</p>
+                            <div class="figure" id="id10">
+                            <img alt="Imagen de los componentes clásicos del color" src="_images/010020_006.jpg">
+                            <p class="caption"><small>Tono, valor y saturación, los componentes del color</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design019.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>Aunque en tiempos modernos se le añade un componente más: la transparencia</p>
+                            <div class="figure" id="id11">
+                            <img alt="Imagen de la transparencia de un tono" src="_images/010020_007.jpg">
+                            </div>
+                            <p class="fragment">Los componentes del color se aplican por igual a Puntos, Líneas y Áreas</p>
+                            <small class="fragment"> pero aplicarlos bien ya es otro tema.</small>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design020.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <div class="section" id="algunos-errores-con-el-color">
+                            <h5>Algunos errores con el color</h5>
+                            <p>El primer error que se suele cometer es usar <strong>demasiado</strong>:</p>
+                            <blockquote>No más de 6 o 7 colores diferentes en un mapa</blockquote>
+                            </div>
+                            <div class="figure" id="id12">
+                            <img alt="Imágen con 11 colores diferentes" src="_images/010020_014.jpg">
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design021.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>El segundo: No todos los componentes sirven para representar todas las
+                            características.</p>
+                            <div class="figure" id="id13">
+                            <img alt="Mapa de coropletas con datos del paro" src="_images/010020_015.jpg">
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design022.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>El tercero: Se debería siempre tener en cuenta que se va a hacer con el mapa y
+                            elegir el sistema de color adecuado</p>
+                            <div class="figure" id="id14">
+                            <img alt="Imagen de composiciones de color CMYK y RGB" src="_images/010020_016.jpg">
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                            <h2>Un pequeño ejercicio</h2>
+                            <p><a class="fragment big" href="http://bit.ly/tjsl18mf01">http://bit.ly/tjsl18mf01</a></p>
+                    </section>
+                    <section data-background="/_images/nacis_design001.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Estructura del relleno</h4>
+                            <p>Los componentes de la variable dependen del autor que se consulte.</p>
+                            <p>Solo se aplica a elementos que se <em>rellenan</em>, preminentemente Áreas.</p>
+                            <div class="figure" id="id15">
+                            <img alt="Imagen con las componentes de la Estructura del relleno" src="_images/010020_010.jpg">
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design002.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>En líneas puede ser un poco más complejo de <em>ver</em></p>
+                            <div class="figure" id="id16">
+                            <img alt="Imagen con distintas estructuras de relleno en líneas" src="_images/010020_011.jpg">
+                            <p class="caption"><small>Estructuras de relleno en líneas.</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design003.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Foco</h4>
+                            <p>Literalmente <em>Lo definidos que están los bordes de un objeto</em></p>
+                            <div class="figure" id="id17">
+                            <img alt="Imagen con un simbolo y diversos niveles de foco" src="_images/010020_012.jpg">
+                            </div>
+                            <small class="fragment">Para algunos autores es sustituible por saturación.</small>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design004.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Resolución</h4>
+                            <p>Cantidad de información que compone un elemento.</p>
+                            <div class="figure" id="id18">
+                            <img alt="Imágen de un mapa de Nueva Zelanda hecho en Lego" src="_images/010020_013.jpg">
+                            </div>
+                            <small>La resolución a.k.a. el tamaño del pixel.</small>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Conclusión</h4>
+                        <div class="figure fragment" id="id19">
+                        <img alt="Imagen resumen de las variables visuales y su uso" src="_images/010020_000.jpg">
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Composición</h3>
+                        <p>El objetivo de un mapa es transmitir información fácil y agradablemente.</p>
+                        <p>Un elemento fundamental de la comunicación es la <strong class="cgreen">Composición</strong></p>
+                        <div class="fragment">
+                        <p class="small">Pincho de tortilla y caña a que la mitad ni había oído hablar de esto.</p>
+                        <div class="figure" id="id1">
+                        <img alt="Imagen de un pincho de tortilla y una caña" src="_images/010050_001.jpg">
+                        </div>
+                        </div>
+                    </section>
+                    <section>
+                        <p><em class="cgreen">Componer</em> es poner un montón de cosas juntas y que resulten agradables a la vista</p>
+                        <div class="figure fragment" id="id2">
+                        <img  alt="Imagen del león como gamba" src="_images/010050_002.jpg">
+                        <p ><small>No, saber componer bien <strong>tampoco</strong> arregla un desastre</small></p>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design005.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Elementos</h4>
+                            <p>En respuesta a ¿que son esas cosas que se ponen juntas en un mapa?</p>
+                            <ul class="simple">
+                            <li>La información geográfica</li>
+                            <li>Título</li>
+                            <li>Leyenda</li>
+                            <li>Escala</li>
+                            <li>Créditos</li>
+                            <li>Marco</li>
+                            <li>Símbolos</li>
+                            <li>Otros elementos</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design006.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <div class="figure" id="id3">
+                            <img alt="Imagen con elementos de un mapa" src="_images/010050_003.jpg">
+                            <p class="caption"><small>Elementos típicos de un mapa para ser impreso</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design007.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h5>Razón</h5>
+                            <div class="section" id="norma-din">
+                            <h6>Norma DIN</h6>
+                            <div class="figure" id="id4">
+                            <img alt="Imagen de la proporción del formato DIN" src="_images/010050_004.jpg">
+                            <p class="caption"><small>Proporción del formato DIN, basado en la raíz de 2</small></p>
+                            </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design008.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <div class="section" id="razon-aurea">
+                            <h6>Razón aurea</h6>
+                            <div class="figure" id="id5">
+                            <img alt="Imagen de la proporción del número áureo" src="_images/010050_005.jpg">
+                            <p class="caption"><small>Proporción áurea</small></p>
+                            </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design009.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h5>Reglas de composición</h5>
+                            <p>Se trata de encontrar la manera de distribuir la información de forma que el
+                            <em>peso</em> de las cosas quede repartido armoniosamente.</p>
+                            <div class="figure fragment" id="id6">
+                            <img alt="Imagen de una piedras en equilibrio" src="_images/010050_006.jpg">
+                            <p class="caption"><small>Encontrar el equilibrio</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design010.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>No se trata de algo que se aprende de golpe, se adquiere con la práctica</p>
+                            <blockquote>
+                            <p class="fragment">Existen unas reglas que ayudan a la mejora de la composición</p>
+                            <p class="fragment">Estas reglas están derivadas de cómo funcionan nuestros ojos y nuestro cerebro</p>
+                            </blockquote>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design011.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>El centro es menos importante que los extremos</p>
+                            <div class="figure" id="id7">
+                            <img alt="Imagen degradado al centro" src="_images/010050_007.jpg">
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design012.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>El peso aumenta en proporción a su distancia al centro</p>
+                            <div class="figure" id="id8">
+                            <img alt="Imagen degradado al centro" src="_images/010050_007.jpg">
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design013.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>La derecha pesa menos que la izquierda</p>
+                            <div class="figure" id="id9">
+                            <img alt="Imagen degradado a la izquierda" src="_images/010050_008.jpg">
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design014.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>Lo grande pesa más que lo pequeño</p>
+                            <div class="figure" id="id10">
+                            <img alt="Imagen con dos rectángulos" src="_images/010050_009.jpg">
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design015.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>Los colores cápdos pesan más que los fríos</p>
+                            <div class="figure" id="id11">
+                            <img alt="Imagen de colores fríos y cálidos" src="_images/010050_010.jpg">
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design016.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>Los colores oscuros pesan más que los claros</p>
+                            <div class="figure" id="id12">
+                            <img alt="Imagen de colores oscuros y claros" src="_images/010050_011.jpg">
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design017.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>Un objeto aislado pesa más que un conjunto</p>
+                            <div class="figure" id="id13">
+                            <img alt="Imagen de elementos aislados y agrupados" src="_images/010050_012.jpg">
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design018.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>Las formas regulares pesan más que las irregulares</p>
+                            <div class="figure" id="id14">
+                            <img alt="Imagen con forma regular e irregular" src="_images/010050_013.jpg">
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design019.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>El peso tiene <em>gravedad</em>  (algo pesado <em>atrae</em> algo más pgero)</p>
+                            <div class="figure" id="id15">
+                            <img alt="Imagen de elementos pesados y más ligeros" src="_images/010050_014.jpg">
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design020.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>Las divisiones en partes iguales pesan menos que las de espacios diferentes</p>
+                            <div class="figure" id="id16">
+                            <img alt="Imagen con divisiones espaciales diferentes" src="_images/010050_015.jpg">
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design021.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>En este paso se suele recomendar la técnica del <strong>Espacio negativo</strong></p>
+                            <div class="figure" id="id17">
+                            <img alt="Imagen ejemplo del uso del espacio negativo" src="_images/010050_016.jpg">
+                            <p class="caption"><small>Buscando equilibrio con el espacio negativo</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                            <h2>Un pequeño ejercicio</h2>
+                            <p><a class="fragment big" href="http://bit.ly/tjsl18mf02">http://bit.ly/tjsl18mf02</a></p>
+                    </section>
+                </section>
+                <section>
+                    <section data-background="/_images/nacis_design022.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h2>Parte emocional</h2>
+                            <p>En contraposición a la «técnica»</p>
+                            <small class="fragment">No me hagáis ni caso</small>
+                            <p class="fragment">Vamos a hablar de <strong class="cgreen">Principios del diseño</strong></p>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Principios del diseño</h3>
+                        <p><em>Dieter Rams</em>, un diseñador industrial alemán se hizo una pregunta <em>¿Es mi diseño
+                        un buen diseño?</em></p>
+                    </section>
+                    <section data-background="/_images/nacis_design000.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>Su respuesta fueron los <strong>Diez principios del diseño</strong>:</p>
+                            <blockquote>
+                            <div><table class="docutils" border="1">
+                            <colgroup>
+                            <col width="47%">
+                            <col width="53%">
+                            </colgroup>
+                            <tbody valign="top">
+                            <tr class="row-odd"><td>Innovación</td>
+                            <td>Honestidad</td>
+                            </tr>
+                            <tr class="row-even"><td>Utilidad</td>
+                            <td>Durabilidad</td>
+                            </tr>
+                            <tr class="row-odd"><td>Estética</td>
+                            <td>Detalle</td>
+                            </tr>
+                            <tr class="row-even"><td>Facilidad</td>
+                            <td>Medioambiental</td>
+                            </tr>
+                            <tr class="row-odd"><td>No intrusivo</td>
+                            <td>Mínimo</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div></blockquote>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design001.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <p>El <em class="cgreen">Ordenance Survey</em> revisó su forma crear cartografía según los
+                            principios de Rams y creó su propia versión adaptada</p>
+                            <blockquote>
+                            <div><table class="docutils" border="1">
+                            <colgroup>
+                            <col width="68%">
+                            <col width="32%">
+                            </colgroup>
+                            <tbody valign="top">
+                            <tr class="row-odd">
+                                <td>Entendiendo los requisitos del usuario</td>
+                                <td>Legibilidad</td>
+                            </tr>
+                            <tr class="row-even">
+                                <td>Considerar el medio de representación</td>
+                                <td>Consistencia</td>
+                            </tr>
+                            <tr class="row-odd">
+                                <td>Mantener una jerarquía visual</td>
+                                <td>Accesibilidad</td>
+                            </tr>
+                            <tr class="row-even">
+                                <td>Simplicidad</td>
+                                <td>Buena composición</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div></blockquote>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design002.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <blockquote>
+                            <p>Estos principios <strong class="cgreen">No son reglas</strong>, son más bien percepciones </p>
+                            <p class="fragment">No se aplican todas, no
+                            se aplican siempre, hay que desarrollar <strong>criterio</strong> a base de usarlos.</p>
+                            </blockquote>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <section data-background="/_images/nacis_design003.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Entendiendo al usuario</h4>
+                            <p>El usuario final quiere el mapa para algo. Ese debería ser el <em>Mensaje</em> principal</p>
+                            <div class="figure" id="id1">
+                            <img alt="Imagen de un mapa base del OS" src="_images/020020_001.jpg">
+                            <p class="caption"><small>El mapa base debe ser una referencia pero no destacar.</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design004.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h5>Entendiendo al usuario</h5>
+                            <ul class="simple">
+                            <li>¿Cuál es la información importante para el usuario?</li>
+                            </ul>
+                            <ul class="simple">
+                            <li>¿El diseño del mapa destaca la información importante? ¿Hemos empleado los
+                            colores y la jerarquía correctamente?</li>
+                            </ul>
+                            <ul class="simple">
+                            <li>¿Cómo se va a emplear el mapa? ¿el diseño es apropiado al medio?</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design005.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Considerar el medio de distribución</h4>
+                            <p>Hay que adaptar el diseño para que funcione en el medio apropiado.</p>
+                            <div class="figure" id="id1">
+                            <img alt="Imagen de un mapa para aplicación web" src="_images/020030_001.jpg">
+                            <p class="caption"><small>Mapa final para aplicación web</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design015.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h5>Considerar el medio de distribución</h5>
+                            <p>Adaptar la escala, la resolución, el tipo de color, considerar el grosor del papel o el tamaño del área de
+                            visualización, la interactividad, los menús de funciones …</p>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design006.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h5>Considerar el medio de distribución</h5>
+                            <ul class="simple">
+                            <li>¿Se va a imprimir? ¿Son los textos legibles? ¿La simbología tiene el tamaño
+                            apropiado? ¿Los colores están adaptados?</li>
+                            <li>¿Se va a emplear un proyector? ¿Debemos mejorar la saturación y el contraste?</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design007.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Jerarquía visual definida</h4>
+                            <p>La información que pretendemos transmitir como mensaje debe destacar claramente
+                            sobre el resto de los elementos del mapa:</p>
+                            <div class="figure" id="id1">
+                            <img alt="Imagen de un mapa del sur de Reino Unido" src="_images/020040_001.jpg">
+                            <p class="caption"><small>Mapa de ciudades destacas del Reino Unido</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design008.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h5>Jerarquía visual definida</h5>
+                            <ul class="simple">
+                            <li>Cuando miro el mapa ¿Veo la información más importante primero?</li>
+                            <li>La información para contexto ¿está convenientemente amortiguada?</li>
+                            <li>Si lo convierto a escala de grises ¿La jerarquía se mantiene?</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design009.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Simplicidad</h4>
+                            <blockquote>No añadir nada que no haga falta
+                            porque no sea parte del mensaje</blockquote>
+                            <div class="figure" id="id1">
+                            <img alt="Imagen de dos mapas de Reino Unido y Gran Bretaña" src="_images/020050_001.jpg">
+                            <p class="caption"><small>Para el Mapa de Gran Bretaña no hace falta añadir Irlanda del Norte.</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design010.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h5>Simplicidad</h5>
+                            <ul class="simple">
+                            <li>¿Hay algo no aporte valor? <strong class="cred">¡Hay que quitarlo!</strong></li>
+                            <li>¿Hay algo demasiado aglomerado o ruidoso?  <strong class="cred">¡Hay que quitarlo!</strong></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design011.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Legibilidad</h4>
+                            <p>Todos los elementos del mapa deben ser legibles, reconocibles y entendibles.</p>
+                            <div class="figure" id="id1">
+                            <img alt="Imagen de un mapa vectorial" src="_images/020060_001.jpg">
+                            <p class="caption"><small>Mapa de las afueras de Southampton</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design012.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h5>Legibilidad</h5>
+                            <p>La legibilidad de la mayoría de elementos depende del color, del tamaño y deben
+                            ir en proporción con la escala.</p>
+                            <ul class="simple">
+                            <li>¿Es todo el texto legible?</li>
+                            <li>¿Los iconos tienen sentido? ¿Son lo suficientemente grandes?</li>
+                            <li>¿Se puede distinguir con facilidad entre elementos adyacentes o que se
+                            solapen?</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design013.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Consistencia</h4>
+                            <p>La consistencia mejora la percepción del mensaje,</p>
+                            <p>Imprescindible en una familia de productos.</p>
+                            <div class="figure" id="id1">
+                            <img alt="Imagen de una serie de mapas de la misma familia" src="_images/020070_001.jpg">
+                            </div>
+                            <small>Que algo nos resulte familiar ayuda a comunicar mejor el mensaje.</small>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design014.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h5>Consistencia</h5>
+                            <ul class="simple">
+                            <li>¿El mapa parece organizado y equilibrado?</li>
+                            <li>Si el mapa es parte de una serie ¿son todos consistentes?</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design015.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Accesibilidad</h4>
+                            <p>Se estima que en torno al 8% de la población masculina tiene una deficiencia
+                            visual relacionada con los colores (solo un 0.5% de la femenina tiene uno).</p>
+                            <div class="figure" id="id1">
+                            <img alt="Imagen comparando un mapa y como lo vería un daltónico" src="_images/020080_001.jpg">
+                            <p class="caption"><small>Mapa del metro de Nueva York, con una accesibilidad comprometida</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design016.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h5>Accesibilidad</h5>
+                            <ul class="simple">
+                            <li>¿Se han usado paletas de color que sean seguras para los daltónicos?</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design017.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h5>Accesibilidad</h5>
+                            <p>Otro tema que se relaciona por el mismo nombre</p> 
+                            <p>La posibilidad de acceder a la información que contiene
+                            (fuentes) o que este pueda reutilizarse después.</p>
+                            <div class="fragment">
+                            <p>Este tipo de accesibilidad a la información está muy condicionado por el tipo
+                            de mapa, el origen de los datos, las licencias implicadas, etc.</p>
+                            <ul class="simple">
+                            <li>¿El mapa resultado es fácilmente accesible al usuario final?</li>
+                            </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design018.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h4>Composición</h4>
+                            <p>El <em>Ordenance Survey</em> también destaca que la composición es uno de los elementos
+                            fundamentales del diseño.</p>
+                            <div class="figure" id="id1">
+                            <img alt="Imagen de la composición de un mapa y su resultado final" src="_images/020100_001.jpg">
+                            <p class="caption"><small>Composición y resultado</small></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="/_images/nacis_design019.jpg">
+                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+                            <h5>Composición</h5>
+                            <ul class="simple">
+                            <li>¿Están todos los elementos ordenados limpiamente?</li>
+                            <li>¿Hay suficiente <em>Espacio blanco</em> para que los elementos resulten claros y
+                            legibles?</li>
+                            <li>¿La información más importante es la que más destaca?</li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Consideraciones finales</h2>
+                        <p class="fragment">Todo lo que hemos visto no son cosas que se apliquen una sola vez y de golpe,
+                        son más bien algo que forma parte de un proceso iterativo. </p>
+                        <p class="fragment">A los buenos mapas,
+                        como a las obras de arte, se vuelve una y otra vez hasta que las expectativas
+                        quedan cubiertas.</p>
+                    </section>
+                    <section>
+                        <h3>Cosas que deberías llevarte de aquí</h3>
+                        <div class="fragment">
+                        <p>En los mapas hay dos componentes diferenciadas:</p>
+                        <ul class="simple">
+                        <li>El objetivo (Mensaje / Qué)</li>
+                        <li>El lenguaje (Diseño / Cómo)</li>
+                        </ul>
+                        </div>
+                        <p>
+                        <div class="fragment">
+                        <h4>Crea nuevos hábitos</h4>
+                        <ul class="simple">
+                        <li>Practica todos los días</li>
+                        <li>Copia, descaradamente</li>
+                        <li>Ten un <a href="http://www.vehrka.net/pages/cartography.html">portfolio</a></li>
+                        </ul>
+                        </div>
+                        </p>
+                    </section>
+                    <section>
+                        <blockquote>Existe una alta probabilidad de que al final, tus mapas <span class="cred">sigan</span> siendo feos…
+                            <span class="fragment cgreen">espero que por lo menos sepas por qué</span></blockquote>
+                    </section>
+                    <section>
+                        <blockquote class="cgreen big">¡GRACIAS!</blockquote>
+                        <p><a href="https://github.com/geoinquietosvlc/tus_mapas_son_feos">Enlace a los materiales taller</a></p>
+                    </section>
+                </section>
+                <!--<section>-->
+                    <!--<section data-background="/_images/nacis_design000.jpg">-->
+                        <!--<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">-->
+                        <!--<p>Hay una ley no escrita sobre el orden de los elementos en un mapa:</p>-->
+                        <!--<ul class="simple">-->
+                        <!--<li>Marcadores</li>-->
+                        <!--<li>Etiquetas</li>-->
+                        <!--<li>Información temática</li>-->
+                        <!--<li>Mapa base</li>-->
+                        <!--</ul>-->
+                        <!--</div>-->
+                    <!--</section>-->
+                <!--</section>-->
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>
