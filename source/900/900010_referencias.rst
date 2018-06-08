@@ -8,6 +8,7 @@ Diseño
 * https://www.axismaps.com/guide/
 * https://www.slideshare.net/DUSPviz/easy-steps-to-better-maps
 * https://www.slideshare.net/shaktinanda/principles-of-design-56175885
+* http://atlasofdesign.org/
 
 Simbología
 ~~~~~~~~~~~
@@ -19,6 +20,7 @@ Color
 ~~~~~
 
 * http://colorbrewer2.org
+* https://www.sessions.edu/color-calculator/
 
 Artículos Ensayos
 ~~~~~~~~~~~~~~~~~

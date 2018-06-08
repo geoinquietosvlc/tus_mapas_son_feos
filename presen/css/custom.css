@@ -1,3 +1,28 @@
-.caption-text {
+:root {
+    --ggreen: #15b750;
+    --cggreen: #b72215;
+    --mggreen: #329e59;
+}
+
+.big {
+    font-size: 200% !important;
+}
+.caption {
     font-size: smaller;
+}
+
+.cgreen {
+    color: var(--ggreen);
+}
+
+.cred {
+    color: var(--cggreen);
+}
+
+.small {
+    font-size: 60% !important;
+}
+
+h2,h3,h4,h5 {
+    color: var(--mggreen) !important;
 }
