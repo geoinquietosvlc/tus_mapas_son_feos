@@ -3,17 +3,17 @@ Vuestros mapas son feos y no sabéis por qué
 ###########################################
 
 :titulo: Vuestros mapas son feos y no sabéis por qué
-:version: 0.0.0
+:version: 1.0.0
 :autor: vehrka
-:fecha: 2018-05-10
+:fecha: 2020-01-15
 
 
 Introducción
 ============
 
-Taller (4 horas)
+Charla (2 horas)
 
-El objetivo principal del taller es repasar los principios básicos del diseño
+El objetivo principal de la charla es repasar los principios básicos del diseño
 cartográfico a través del análisis del Por Qué (Why) y usando metodología
 comparada
 
@@ -21,18 +21,13 @@ Muchas veces nos pasamos de técnicos y olvidamos que la Cartografía es un arte
 tanto como una ciencia y que en su espíritu está la esencia de los
 exploradores, el enfrentarse a lo desconocido para abrirlo a otras personas.
 
-En el taller se tratarán temas cómo:
+En la charla se tratarán temas cómo:
 
 * Variables visuales
 * El color
 * Simbolización
 * Composición
 * Tipos de mapas
-
-Software, librería o plataformas que se van a utilizar
-------------------------------------------------------
-
-La mejor herramienta cartográfica de Software Libre que existe: ¡¡GIMP!!
 
 Conocimientos mínimos necesarios
 --------------------------------
@@ -44,7 +39,7 @@ Requisitos técnicos necesarios
 
 Ninguno
 
-Nivel del taller o tutorial
+Nivel de la charla o tutorial
 ---------------------------
 
 Introductorio
