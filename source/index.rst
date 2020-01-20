@@ -18,7 +18,7 @@ Antes de empezar, habría que tener claros unos conceptos
 
 * Diseño cartográfico >> Arte cartográfico >> Estética cartográfica
 
-* Útil / no útil **¿Comuníca?**
+* Útil / no útil **¿Comunica?**
 
 * Feo / Bonito **¿Es estético?**
 

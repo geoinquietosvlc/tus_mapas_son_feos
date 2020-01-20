@@ -209,11 +209,11 @@ características.
 .. figure:: ../img/010020_015.jpg
    :alt: Mapa de coropletas con datos del paro
 
-   Parece que en Castilla se produce mucho un fenómeno... pero lo que sobretodo
+   Parece que en Castilla se produce mucho un fenómeno... pero lo que sobre todo
    hay son grandes superficies en los municipios.
 
 
-El tercero: Se debería siempre tener en cuenta que se va a hacer con el mapa y
+El tercero: Se debería siempre tener en cuenta qué se va a hacer con el mapa y
 elegir el sistema de color adecuado:
 
 .. figure:: ../img/010020_016.jpg
